@@ -116,3 +116,29 @@ console.log(calculator(6, '*', 5)); // Output: 30 (6 * 5)
 console.log(calculator(20, '/', 4)); // Output: 5 (20 / 4)
 console.log(calculator(10, '/', 0)); // Output: "Error: Cannot divide by zero"
 console.log(calculator(8, '%', 2)); // Output: "Error: Invalid operator"
+
+
+
+
+// Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
+
+const generateRandomPassword = length => {
+    const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowerCase  = 'abcdefghijklmnopqrstuvwxyz';
+    const numberChars = '0123456789';
+    const specialChars = '!@#$%^&*()-_=+[]{}|;:,.<>?';
+
+    const allChars = upperCase + lowerCase + numberChars + specialChars;
+
+    let password = "";
+
+    for (let i = 0; i < length; i++){
+        const randomIndex = Math.floor(Math.random() * allChars.length)
+        password = password + allChars.charAt(randomIndex);
+    }
+    return password;
+}
+
+const password = generateRandomPassword(10);
+console.log(password);
+
