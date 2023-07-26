@@ -1,87 +1,87 @@
 // Task 1 : Create a function that takes a string as input and returns the reversed version of the string without using the built-in reverse() method. 
 
 
-// const myString = str => {
-//     let reverseStr = "";
-//     for(i = str.length - 1; i >=0 ; i--){
-//         reverseStr = reverseStr + str.charAt(i);
-//     }
-//     return reverseStr
-// }
+const myString = str => {
+    let reverseStr = "";
+    for(i = str.length - 1; i >=0 ; i--){
+        reverseStr = reverseStr + str.charAt(i);
+    }
+    return reverseStr
+}
 
-// const myInput = "I live in Bangladesh";
-// const newStr  = myString(myInput);
-// console.log(newStr);
+const myInput = "I live in Bangladesh";
+const newStr  = myString(myInput);
+console.log(newStr);
 
 
 // Task 2 : Create a function that takes an array of numbers as input and returns the sum of all positive numbers in the array. 
 
-// const sumPositiveNumbers = arr => {
-//     let sum = 0;
-//     for(let i = 0; i < arr.length; i++){
-//         if(arr[i] > 0){
-//             sum = sum + arr[i];
-//         }
+const sumPositiveNumbers = arr => {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > 0){
+            sum = sum + arr[i];
+        }
 
-//     }
-//     return sum;
-// }
+    }
+    return sum;
+}
 
-// const numbers = [2, -5, 10, -3, 7];
-// const positiveSum = sumPositiveNumbers(numbers);
-// console.log(positiveSum);
+const numbers = [2, -5, 10, -3, 7];
+const positiveSum = sumPositiveNumbers(numbers);
+console.log(positiveSum);
 
 
 // Task 3: Write a JavaScript program to find the most frequent element in an array and return it. 
 
-// const arr = [1, 2, 2, 2, 3, 3, 3, 7, 8, 9, 5];
+const arr = [1, 2, 2, 2, 3, 3, 3, 7, 8, 9, 5];
 
-// let s = {};
+let s = {};
 
-// arr.map((x, i) => {
-//     s[x] = s[x] + 1 || 1;
-// });
+arr.map((x, i) => {
+    s[x] = s[x] + 1 || 1;
+});
 
-// // console.log(s);
+// console.log(s);
 
-// let k = Object.keys(s);
-// let v = Object.values(s);
+let k = Object.keys(s);
+let v = Object.values(s);
 
-// let max = Math.max(...v);
+let max = Math.max(...v);
 
-// console.log(max);
+console.log(max);
 
 
 
 // Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
 
 
-// function findTwoSumIndices(sortedArray, target) {
-//     let left = 0;
-//     let right = sortedArray.length - 1;
+function findTwoSumIndices(sortedArray, target) {
+    let left = 0;
+    let right = sortedArray.length - 1;
 
-//     while (left < right) {
-//         const sum = sortedArray[left] + sortedArray[right];
+    while (left < right) {
+        const sum = sortedArray[left] + sortedArray[right];
 
-//         if (sum === target) {
-//             return [left, right];
-//         } else if (sum < target) {
-//             left++;
-//         } else {
-//             right--;
-//         }
-//     }
+        if (sum === target) {
+            return [left, right];
+        } else if (sum < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
 
-//     // If no two numbers found, return an empty array
-//     return [];
-// }
+    // If no two numbers found, return an empty array
+    return [];
+}
 
 
-// const sortedArray = [1, 3, 5, 7, 9, 11];
-// const target = 12;
+const sortedArray = [1, 3, 5, 7, 9, 11];
+const target = 12;
 
-// const result = findTwoSumIndices(sortedArray, target);
-// console.log(result); // Output: [0, 4] (1 + 11 = 12)
+const result = findTwoSumIndices(sortedArray, target);
+console.log(result); // Output: [0, 4] (1 + 11 = 12)
 
 
 
