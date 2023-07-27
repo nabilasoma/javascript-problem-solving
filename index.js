@@ -110,12 +110,12 @@ function calculator(num1, operator, num2) {
     }
 }
 
-console.log(calculator(5, '+', 3)); // Output: 8 (5 + 3)
-console.log(calculator(10, '-', 4)); // Output: 6 (10 - 4)
-console.log(calculator(6, '*', 5)); // Output: 30 (6 * 5)
-console.log(calculator(20, '/', 4)); // Output: 5 (20 / 4)
-console.log(calculator(10, '/', 0)); // Output: "Error: Cannot divide by zero"
-console.log(calculator(8, '%', 2)); // Output: "Error: Invalid operator"
+console.log(calculator(5, '+', 3)); 
+console.log(calculator(14, '-', 4)); 
+console.log(calculator(6, '*', 5)); 
+console.log(calculator(30, '/', 4)); 
+console.log(calculator(10, '/', 0));
+console.log(calculator(8, '%', 2)); 
 
 
 
